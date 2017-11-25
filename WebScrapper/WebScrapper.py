@@ -28,6 +28,6 @@ http = urllib3.PoolManager()
 url = "https://supertote.mu/racing"
 response = http.request('GET', url)
 soup = BeautifulSoup(response.data)
-all_links = soup.find_all('a', 'race-info')
+all_links = soup.find_all('ol', 'race-meeting')
 for link in all_links:
     print (link)
